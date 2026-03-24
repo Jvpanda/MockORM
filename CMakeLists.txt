@@ -19,3 +19,7 @@ target_link_libraries(AbsDatabase
     PUBLIC
     sqlite3
 )
+
+target_compile_definitions(AbsDatabase PUBLIC
+    DATABASE_ROOT="${CMAKE_CURRENT_SOURCE_DIR}"
+)

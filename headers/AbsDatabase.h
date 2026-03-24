@@ -11,6 +11,10 @@
 #include <string>
 #include <variant>
 
+#ifndef DATABASE_ROOT
+#define DATABASE_ROOT ""
+#endif
+
 /**
  * @class ABSDatabase
  * @brief A wrapper for the SQLite database connection handle.
@@ -31,7 +35,7 @@ class ABSDatabase
                  */
                 ABSDatabase(const std::string &file)
                 {
-                        ConnectToDB(file);
+                        ConnectToDB(DATABASE_ROOT + file);
                 }
 
                 /** @brief Destructor. Ensures the database connection is safely
