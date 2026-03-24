@@ -24,6 +24,8 @@
  * Quick Explanation of general use cases in parameters:
  * ("Use this database path", "with this table", {"Where", "these", "columns"},
  * {"Are", "equal to", "These value"};
+ * @warning Please sanitize any and all inputs. This implementation does NOT do
+ * that for you
  * ---------------------------------------------------------------------------------
  */
 namespace Query
