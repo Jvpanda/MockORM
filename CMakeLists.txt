@@ -21,5 +21,5 @@ target_link_libraries(AbsDatabase
 )
 
 target_compile_definitions(AbsDatabase PUBLIC
-    DATABASE_ROOT="${CMAKE_CURRENT_SOURCE_DIR}"
+    DATABASE_ROOT="${CMAKE_SOURCE_DIR}/Databases/"
 )

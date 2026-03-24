@@ -329,7 +329,7 @@ bool mergeUniqueDatabases(const std::string &mainDBName,
                 // Attach other database
                 {
                         Statement attach(db, "ATTACH DATABASE ? AS other;");
-                        attach.bind(1, otherFile);
+                        attach.bind(1, DATABASE_ROOT + otherFile);
                         attach.execute();
                 }
 
@@ -392,7 +392,7 @@ bool mergeDatabases(const std::string &mainDBName, const std::string &otherFile,
                 // Attach other database
                 {
                         Statement attach(db, "ATTACH DATABASE ? AS other;");
-                        attach.bind(1, otherFile);
+                        attach.bind(1, DATABASE_ROOT + otherFile);
                         attach.execute();
                 }
 
